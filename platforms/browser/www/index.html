@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Factorial</title>
+		<script>
+		function calcFact(e){
+			var n = document.getElementById('num').value;
+			var res = n;
+            if(res>0)
+			while(--n){
+				res*=n;
+                //document.getElementById('result').innerHTML = document.getElementById('result').textContent+res/n+"x"+n+"="+res+" ";
+			}
+			document.getElementById('TEST').innerHTML = "The Factorial of the number is " + res;
+            return false;
+            
+		}
+		</script>
+    </head>
+    <body bgcolor="#55ff88">
+        <script type="text/javascript" src="cordova.js"></script>
+		<h1>Factorial Calculator</h1>
+	<form>
+		<label for ="num"> The number goes here: </label>
+		<input type="number" id="num"/>
+		<button id="btncalc" onclick=" return calcFact()">Calc</button>
+	</form>
+    <div style="padding: 10px; margin: 10px; background-color: azure" id="result"></div>
+        <div id="TEST"></div>
+    </body>
+</html>
